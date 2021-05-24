@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="Welcome on board" recipientType="User" relatedToType="Hospitals_Doctors__c">
+<messaging:htmlEmailBody >
+        <html>
+        <body>
+     <div style="background-color: azure; margin: auto; width: 80%; text-align: center;" id="container">
+    <br/>
+    <h1 style="font-size: 24px; font-weight: bold; color: #1798c1;">Welcome on board!</h1>
+        <p style="font-size: 20px; color: cornflowerblue">Good morning <span style="font-size: 24px; font-weight: bold;"
+                       id="doctor">{!relatedTo.DoctorFirstName__c} {!relatedTo.DoctorLastName__c}</span>,
+            <br/>Today is your first day at work in {!relatedTo.HospitalName__c}, we wish you amazing time!
+        </p>
+    <div class="img">
+    <apex:image url="https://britenet81-dev-ed--c.documentforce.com/servlet/servlet.ImageServer?id=015090000011v33&oid=00D09000007ixmf&lastMod=1621781189000"/>
+    </div>
+    </div>
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>
